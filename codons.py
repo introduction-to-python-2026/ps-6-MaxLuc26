@@ -9,7 +9,7 @@ def create_codon_dict(file_path):
         full_codon = row.strip().split('\t')
         codon = cells[0]
         amino_acid = cells[2]
-        dic[codon] = amino_acid
+        dic[full_codon] = amino_acid
 
     return dic
 
