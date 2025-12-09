@@ -1,16 +1,15 @@
-path = "/content/data/codons.txt"
-file = open(path)
-rows = file.readlines()
-file.close
-
-
-
 def create_codon_dict(file_path):
-    amino_dict = {}
-    for i in rows:
-      stripped = i.strip()
-      polished = stripped.split('\t')
-      amino_dict[polished[0]] = polished[2]
-    return amino_dict
+    file = open(file_path)
 
+    rows = file.readlines()
+    file.close()
+
+    dic = {}
+    for row in rows:
+        full_codon = row.strip().split('\t')
+        codon = cells[0]
+        amino_acid = cells[2]
+        dic[codon] = amino_acid
+
+    return dic
 
